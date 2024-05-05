@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="spotmicro_test_urdf">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.15063 0.16918 0.41205"
+        rpy="0 0 0" />
+      <mass
+        value="0.18556" />
+      <inertia
+        ixx="0.00027818"
+        ixy="4.3791E-08"
+        ixz="8.8551E-09"
+        iyy="0.00031044"
+        iyz="1.0055E-06"
+        izz="0.00045145" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spotmicro_test_urdf/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spotmicro_test_urdf/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="front_left_shoulder_link">
+    <inertial>
+      <origin
+        xyz="-0.015926 0.024954 0.02626"
+        rpy="0 0 0" />
+      <mass
+        value="0.023245" />
+      <inertia
+        ixx="1.0199E-05"
+        ixy="5.1964E-07"
+        ixz="-5.9066E-08"
+        iyy="8.7583E-06"
+        iyz="-2.3765E-08"
+        izz="5.5095E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spotmicro_test_urdf/meshes/front_left_shoulder_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.098039 0.098039 0.098039 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spotmicro_test_urdf/meshes/front_left_shoulder_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_left_shoulder_joint"
+    type="revolute">
+    <origin
+      xyz="0.083432 -0.38203 0.26969"
+      rpy="-1.5708 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_left_shoulder_link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="front_left_top_leg_link">
+    <inertial>
+      <origin
+        xyz="-0.03839 0.039911 0.76787"
+        rpy="0 0 0" />
+      <mass
+        value="0.0541" />
+      <inertia
+        ixx="5.1006E-05"
+        ixy="6.9559E-09"
+        ixz="-2.4597E-06"
+        iyy="4.9512E-05"
+        iyz="3.9615E-06"
+        izz="8.2949E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spotmicro_test_urdf/meshes/front_left_top_leg_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.098039 0.098039 0.098039 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spotmicro_test_urdf/meshes/front_left_top_leg_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_left_top_leg_joint"
+    type="revolute">
+    <origin
+      xyz="-0.014683 -0.549 0.46222"
+      rpy="3.1416 -0.95993 1.5708" />
+    <parent
+      link="front_left_shoulder_link" />
+    <child
+      link="front_left_top_leg_link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="front_left_bottom_leg_link">
+    <inertial>
+      <origin
+        xyz="0.20031 -0.48365 0.23645"
+        rpy="0 0 0" />
+      <mass
+        value="0.028735" />
+      <inertia
+        ixx="4.2921E-06"
+        ixy="-3.2593E-06"
+        ixz="3.9385E-06"
+        iyy="6.7437E-05"
+        iyz="3.1107E-07"
+        izz="6.7109E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spotmicro_test_urdf/meshes/front_left_bottom_leg_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.098039 0.098039 0.098039 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spotmicro_test_urdf/meshes/front_left_bottom_leg_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_left_bottom_leg_joint"
+    type="revolute">
+    <origin
+      xyz="0.15499 -0.43707 0.63677"
+      rpy="0 0.2618 -3.1416" />
+    <parent
+      link="front_left_top_leg_link" />
+    <child
+      link="front_left_bottom_leg_link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="back_left_shoulder_link">
+    <inertial>
+      <origin
+        xyz="-0.015926 0.024954 0.02626"
+        rpy="0 0 0" />
+      <mass
+        value="0.023245" />
+      <inertia
+        ixx="1.0199E-05"
+        ixy="5.1964E-07"
+        ixz="-5.9066E-08"
+        iyy="8.7583E-06"
+        iyz="-2.3765E-08"
+        izz="5.5095E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spotmicro_test_urdf/meshes/back_left_shoulder_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.098039 0.098039 0.098039 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spotmicro_test_urdf/meshes/back_left_shoulder_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="back_left_shoulder_joint"
+    type="revolute">
+    <origin
+      xyz="0.083432 -0.38203 0.082186"
+      rpy="-1.5708 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="back_left_shoulder_link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="back_left_top_leg_link">
+    <inertial>
+      <origin
+        xyz="-0.0383901944027628 0.0399109204973224 0.767866585360039"
+        rpy="0 0 0" />
+      <mass
+        value="0.0541003736709498" />
+      <inertia
+        ixx="5.10063869441116E-05"
+        ixy="6.95589520913907E-09"
+        ixz="-2.4597497494731E-06"
+        iyy="4.95124693020036E-05"
+        iyz="3.9614551124075E-06"
+        izz="8.29492357103396E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spotmicro_test_urdf/meshes/back_left_top_leg_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0980392156862745 0.0980392156862745 0.0980392156862745 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spotmicro_test_urdf/meshes/back_left_top_leg_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="back_left_top_leg_joint"
+    type="revolute">
+    <origin
+      xyz="-0.014683 -0.549 0.46222"
+      rpy="3.1416 -0.95993 1.5708" />
+    <parent
+      link="back_left_shoulder_link" />
+    <child
+      link="back_left_top_leg_link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="back_left_bottom_leg_link">
+    <inertial>
+      <origin
+        xyz="0.20031201545386 -0.483650020807854 0.23645017312076"
+        rpy="0 0 0" />
+      <mass
+        value="0.0287350834744898" />
+      <inertia
+        ixx="4.29213028614599E-06"
+        ixy="-3.25928881788901E-06"
+        ixz="3.93849114184782E-06"
+        iyy="6.74373174286215E-05"
+        iyz="3.11068351479878E-07"
+        izz="6.71092865934358E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spotmicro_test_urdf/meshes/back_left_bottom_leg_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0980392156862745 0.0980392156862745 0.0980392156862745 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spotmicro_test_urdf/meshes/back_left_bottom_leg_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="back_left_bottom_leg_joint"
+    type="revolute">
+    <origin
+      xyz="0.15499 -0.43707 0.63677"
+      rpy="0 0.2618 -3.1416" />
+    <parent
+      link="back_left_top_leg_link" />
+    <child
+      link="back_left_bottom_leg_link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="front_right_shoulder_link">
+    <inertial>
+      <origin
+        xyz="-0.014984 0.024796 -0.026032"
+        rpy="0 0 0" />
+      <mass
+        value="0.027445" />
+      <inertia
+        ixx="1.0952E-05"
+        ixy="5.0717E-07"
+        ixz="-8.3815E-09"
+        iyy="9.3677E-06"
+        iyz="3.865E-08"
+        izz="6.1079E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spotmicro_test_urdf/meshes/front_right_shoulder_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.098039 0.098039 0.098039 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spotmicro_test_urdf/meshes/front_right_shoulder_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_right_shoulder_joint"
+    type="revolute">
+    <origin
+      xyz="0.21781 -0.38203 0.26969"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_right_shoulder_link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="front_right_top_leg_link">
+    <inertial>
+      <origin
+        xyz="-0.0383901213697152 0.039910907772139 -0.767866674756265"
+        rpy="0 0 0" />
+      <mass
+        value="0.0541003356631991" />
+      <inertia
+        ixx="5.10064102961306E-05"
+        ixy="7.02679399464376E-09"
+        ixz="2.45986522690675E-06"
+        iyy="4.95124442637593E-05"
+        iyz="-3.9615380913588E-06"
+        izz="8.29484049269704E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spotmicro_test_urdf/meshes/front_right_top_leg_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0980392156862745 0.0980392156862745 0.0980392156862745 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spotmicro_test_urdf/meshes/front_right_top_leg_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_right_top_leg_joint"
+    type="revolute">
+    <origin
+      xyz="-0.014683 -0.549 -0.46222"
+      rpy="3.1416 0.95993 1.5708" />
+    <parent
+      link="front_right_shoulder_link" />
+    <child
+      link="front_right_top_leg_link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="front_right_bottom_leg_link">
+    <inertial>
+      <origin
+        xyz="0.200311851195204 -0.483650021236253 -0.236450230350531"
+        rpy="0 0 0" />
+      <mass
+        value="0.0287350640928098" />
+      <inertia
+        ixx="4.29213288728501E-06"
+        ixy="-3.25927859846549E-06"
+        ixz="-3.93850857348559E-06"
+        iyy="6.74374069309438E-05"
+        iyz="-3.1106302790063E-07"
+        izz="6.710937211015E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spotmicro_test_urdf/meshes/front_right_bottom_leg_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0980392156862745 0.0980392156862745 0.0980392156862745 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spotmicro_test_urdf/meshes/front_right_bottom_leg_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_right_bottom_leg_joint"
+    type="revolute">
+    <origin
+      xyz="0.15499 -0.43707 -0.63677"
+      rpy="0 -0.2618 -3.1416" />
+    <parent
+      link="front_right_top_leg_link" />
+    <child
+      link="front_right_bottom_leg_link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="back_right_shoulder_link">
+    <inertial>
+      <origin
+        xyz="0.15063 0.16918 0.41205"
+        rpy="0 0 0" />
+      <mass
+        value="0.18556" />
+      <inertia
+        ixx="0.00027818"
+        ixy="4.3791E-08"
+        ixz="8.8551E-09"
+        iyy="0.00031044"
+        iyz="1.0055E-06"
+        izz="0.00045145" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spotmicro_test_urdf/meshes/back_right_shoulder_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spotmicro_test_urdf/meshes/back_right_shoulder_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="back_right_shoulder_joint"
+    type="revolute">
+    <origin
+      xyz="0.21781 -0.38203 0.082186"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="back_right_shoulder_link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="back_right_top_leg_link">
+    <inertial>
+      <origin
+        xyz="-0.0383901213697145 0.0399109077721393 -0.767866674756265"
+        rpy="0 0 0" />
+      <mass
+        value="0.054100335663199" />
+      <inertia
+        ixx="5.10064102961306E-05"
+        ixy="7.02679399464874E-09"
+        ixz="2.45986522690681E-06"
+        iyy="4.95124442637593E-05"
+        iyz="-3.96153809135878E-06"
+        izz="8.29484049269703E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spotmicro_test_urdf/meshes/back_right_top_leg_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0980392156862745 0.0980392156862745 0.0980392156862745 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spotmicro_test_urdf/meshes/back_right_top_leg_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="back_right_top_leg_joint"
+    type="revolute">
+    <origin
+      xyz="-0.014683 -0.549 -0.46222"
+      rpy="3.1416 0.95993 1.5708" />
+    <parent
+      link="back_right_shoulder_link" />
+    <child
+      link="back_right_top_leg_link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="back_right_bottom_leg_link">
+    <inertial>
+      <origin
+        xyz="0.200311851195204 -0.483650021236253 -0.236450230350531"
+        rpy="0 0 0" />
+      <mass
+        value="0.0287350640928096" />
+      <inertia
+        ixx="4.29213288728499E-06"
+        ixy="-3.2592785984655E-06"
+        ixz="-3.93850857348558E-06"
+        iyy="6.74374069309435E-05"
+        iyz="-3.11063027900631E-07"
+        izz="6.71093721101496E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spotmicro_test_urdf/meshes/back_right_bottom_leg_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0980392156862745 0.0980392156862745 0.0980392156862745 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spotmicro_test_urdf/meshes/back_right_bottom_leg_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="back_right_bottom_leg_joint"
+    type="revolute">
+    <origin
+      xyz="0.15499 -0.43707 -0.63677"
+      rpy="0 -0.2618 -3.1416" />
+    <parent
+      link="back_right_top_leg_link" />
+    <child
+      link="back_right_bottom_leg_link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="simple_test_urdf">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0216033399438031 0.0079630228935863 0.00535491378030884"
+        rpy="0 0 0" />
+      <mass
+        value="0.00251327412287184" />
+      <inertia
+        ixx="6.6182885235625E-08"
+        ixy="2.5067597473817E-40"
+        ixz="8.53365159179446E-24"
+        iyy="6.6182885235625E-08"
+        iyz="1.76465197344646E-24"
+        izz="1.25663706143592E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simple_test_urdf/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simple_test_urdf/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="left_wheel_link">
+    <inertial>
+      <origin
+        xyz="0 0.00199999999999999 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.00125663706143592" />
+      <inertia
+        ixx="3.30914426178125E-08"
+        ixy="-4.26682579589723E-24"
+        ixz="-9.73941807356457E-40"
+        iyy="6.28318530717959E-08"
+        iyz="-3.46189539670878E-24"
+        izz="3.30914426178125E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simple_test_urdf/meshes/left_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simple_test_urdf/meshes/left_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.020872 -0.029355 0.0075121"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_wheel_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="right_wheel_link">
+    <inertial>
+      <origin
+        xyz="0 0.002 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.00125663706143592" />
+      <inertia
+        ixx="3.30914426178125E-08"
+        ixy="4.26682579589723E-24"
+        ixz="-1.59470592589694E-39"
+        iyy="6.28318530717959E-08"
+        iyz="-8.82325986723229E-25"
+        izz="3.30914426178125E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simple_test_urdf/meshes/right_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simple_test_urdf/meshes/right_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.022335 0.018645 0.008414"
+      rpy="3.1416 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_wheel_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
